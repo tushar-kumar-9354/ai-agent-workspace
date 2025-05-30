@@ -18,9 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from agent.views import HealthCheck
-from agent.views import CodeGenerationView
+from agent.views import CodeGenerationView, CodeExecutorAPIView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/health/', HealthCheck.as_view()),
     path("generate-code/", CodeGenerationView.as_view(), name="generate-code"),
+    path("execute-code/", CodeExecutorAPIView.as_view(), name="execute-code"),
 ]
