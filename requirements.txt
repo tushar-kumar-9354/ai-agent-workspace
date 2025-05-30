@@ -1,0 +1,7 @@
+django
+djangorestframework
+fastapi
+uvicorn
+chromadb
+google-generativeai
+python-dotenv
